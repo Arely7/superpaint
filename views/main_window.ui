@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>899</width>
-    <height>600</height>
+    <height>675</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -42,17 +42,20 @@ border:none;</string>
      <string>Super Paint</string>
     </property>
    </widget>
-   <widget class="QTextEdit" name="textEdit">
+   <widget class="QTextEdit" name="txtColor">
     <property name="geometry">
      <rect>
       <x>100</x>
       <y>10</y>
-      <width>104</width>
-      <height>71</height>
+      <width>101</width>
+      <height>21</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:rgb(255, 231, 253)</string>
+    </property>
    </widget>
-   <widget class="QSlider" name="horizontalSlider">
+   <widget class="QSlider" name="slider">
     <property name="geometry">
      <rect>
       <x>210</x>
@@ -61,11 +64,20 @@ border:none;</string>
       <height>22</height>
      </rect>
     </property>
+    <property name="minimum">
+     <number>1</number>
+    </property>
+    <property name="maximum">
+     <number>80</number>
+    </property>
+    <property name="value">
+     <number>30</number>
+    </property>
     <property name="orientation">
      <enum>Qt::Horizontal</enum>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="btnPincel">
     <property name="geometry">
      <rect>
       <x>330</x>
@@ -82,10 +94,10 @@ border:none;</string>
     </property>
     <property name="icon">
      <iconset>
-      <normaloff>../icons/brush.png</normaloff>../icons/brush.png</iconset>
+      <normaloff>D:/TEC/Cuarto Semestre/GitHub/superpaint/icons/brush.png</normaloff>D:/TEC/Cuarto Semestre/GitHub/superpaint/icons/brush.png</iconset>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="btnBorrador">
     <property name="geometry">
      <rect>
       <x>410</x>
@@ -95,14 +107,17 @@ border:none;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color:rgb(253, 217, 255);
-border:none;</string>
+     <string notr="true">background-color:rgb(255, 140, 240)</string>
     </property>
     <property name="text">
-     <string>PushButton</string>
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>D:/TEC/Cuarto Semestre/GitHub/superpaint/icons/eraser.png</normaloff>D:/TEC/Cuarto Semestre/GitHub/superpaint/icons/eraser.png</iconset>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_3">
+   <widget class="QPushButton" name="btnLinea">
     <property name="geometry">
      <rect>
       <x>490</x>
@@ -111,11 +126,18 @@ border:none;</string>
       <height>23</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:rgb(255, 140, 240)</string>
+    </property>
     <property name="text">
-     <string>PushButton</string>
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>D:/TEC/Cuarto Semestre/GitHub/superpaint/icons/line.png</normaloff>D:/TEC/Cuarto Semestre/GitHub/superpaint/icons/line.png</iconset>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_4">
+   <widget class="QPushButton" name="btnCuadro">
     <property name="geometry">
      <rect>
       <x>570</x>
@@ -124,11 +146,18 @@ border:none;</string>
       <height>23</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:rgb(255, 140, 240)</string>
+    </property>
     <property name="text">
-     <string>PushButton</string>
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>D:/TEC/Cuarto Semestre/GitHub/superpaint/icons/square.png</normaloff>D:/TEC/Cuarto Semestre/GitHub/superpaint/icons/square.png</iconset>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_5">
+   <widget class="QPushButton" name="btnGuardar">
     <property name="geometry">
      <rect>
       <x>650</x>
@@ -137,11 +166,18 @@ border:none;</string>
       <height>23</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:rgb(255, 140, 240)</string>
+    </property>
     <property name="text">
-     <string>PushButton</string>
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>D:/TEC/Cuarto Semestre/GitHub/superpaint/icons/save.png</normaloff>D:/TEC/Cuarto Semestre/GitHub/superpaint/icons/save.png</iconset>
     </property>
    </widget>
-   <widget class="QComboBox" name="comboBox">
+   <widget class="QComboBox" name="comboDibujos">
     <property name="geometry">
      <rect>
       <x>730</x>
@@ -149,6 +185,22 @@ border:none;</string>
       <width>69</width>
       <height>22</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:rgb(255, 231, 253)</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="widget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>40</y>
+      <width>600</width>
+      <height>600</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:rgb(255, 231, 253)</string>
     </property>
    </widget>
   </widget>
@@ -161,8 +213,20 @@ border:none;</string>
      <height>21</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuOpen">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionOpen"/>
+   </widget>
+   <addaction name="menuOpen"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionOpen">
+   <property name="text">
+    <string>Open</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>
